@@ -8,7 +8,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Pokemon</h1>
         </header>
-
+      
       </div>
     );
   }
