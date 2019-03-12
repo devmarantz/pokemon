@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import base from '../base';
 import '../css/App.css';
 import SearchPokemon from './SearchPokemon';
 import PokemonInfo from './PokemonInfo';
@@ -11,6 +12,13 @@ class App extends Component {
       pokemon: {},
       myTeam: []   
     }
+  }
+
+  componentDidMount = () => {
+    this.ref = base.syncState('myTeam', {
+      context: this,
+      state: 'myTeam'
+    })
   }
 
   updateTeam = () => {

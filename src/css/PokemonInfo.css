@@ -1,3 +1,6 @@
 .stats, .type, .moves {
   list-style-type: none;
 }
+.container {
+  display: flex;
+}
