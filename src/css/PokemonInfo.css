@@ -1,3 +1,23 @@
+.pokemon-info {
+  text-align: center;
+}
+
 .stats, .type, .moves {
   list-style-type: none;
 }
+
+.pokemon-name {
+  font-size: 24px;
+  padding: 5px;
+}
+
+.type {
+  display: inline-flex;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid black;
+  padding: 3px;
+  width: 55px;
+  margin: 0 10px;
+}
+
