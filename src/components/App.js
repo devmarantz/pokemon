@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import base from '../base';
-import '../css/App.css';
+import API from '../API';
 import SearchPokemon from './SearchPokemon';
 import PokemonInfo from './PokemonInfo';
-import API from '../API';
+import MyTeam from './MyTeam';
+import '../css/App.css';
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +35,6 @@ class App extends Component {
         this.setState(prevState => {
           const updateTeam = prevState.myTeam; 
           updateTeam.push(this.state.pokemon);
-          // myTeam: this.state.myTeam.push(this.state.pokemon) 
         return { myTeam: updateTeam }
         }) 
       }
@@ -42,6 +42,14 @@ class App extends Component {
       // need to remove pokemon
       alert('Team Full!')
     }
+  }
+
+  removePokemonFromTeam = idx => {
+    this.setState(prevState => {
+      prevState.myTeam.splice(idx, 1);
+      const updateTeam = prevState.myTeam
+    return { myTeam: updateTeam }
+    })  
   }
 
   // get pokemon information
@@ -65,6 +73,7 @@ class App extends Component {
         </header>
         <SearchPokemon pokemon={this.state.pokemon} onSearch={this.handleSearchFunction} />
         <PokemonInfo pokemon={this.state.pokemon} updateTeam={this.updateTeam}/>
+        <MyTeam myteam={this.state.myTeam} removePokemonFromTeam={this.removePokemonFromTeam} />
       </div>
     );
   }
