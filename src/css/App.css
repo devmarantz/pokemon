@@ -7,7 +7,7 @@
   color: white;
   text-align: left;
   margin-bottom: 10px;
-  height: 7rem;
+  height: 6.2rem;
   overflow: hidden;
 }
 
@@ -20,7 +20,7 @@
   background-color: white;
   display: block;
   margin-bottom: 10px;
-  margin-top: 1.7rem;
+  margin-top: 3.1rem;
   margin-left: 50%;
   height: 3.5rem;
   width: 55%;
@@ -30,6 +30,7 @@
 }
 
 .App-header #bigCircle {
+  margin-top: 1rem;
   height: 4rem;
   width: 4rem;
   margin-left: 4rem;
@@ -68,6 +69,7 @@
   height: 1.2rem;
   width: 1.2rem;
   margin-left: 9.3rem;
+  margin-top: 1rem;
   background-color: rgb(255, 102, 102);
   border-radius: 50%;
   display: inline-block;
@@ -79,6 +81,7 @@
   height: 1.2rem;
   width: 1.2rem;
   margin-left: 11.3rem;
+  margin-top: 1rem;
   background-color: rgb(255, 251, 17);
   border-radius: 50%;
   display: inline-block;
@@ -90,9 +93,27 @@
   height: 1.2rem;
   width: 1.2rem;
   margin-left: 13.3rem;
+  margin-top: 1rem;
   background-color: rgb(46, 253, 5);
   border-radius: 50%;
   display: inline-block;
   position: absolute;
   z-index: 1;
+}
+
+/* Flash class and keyframe animation */
+.flashit{
+  color:#f2f;
+	-webkit-animation: flash linear 3s infinite;
+	animation: flash linear 3s infinite;
+}
+@-webkit-keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .7; } 
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .7; } 
+	100% { opacity: 1; }
 }

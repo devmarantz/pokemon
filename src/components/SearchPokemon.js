@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../css/SearchPokemon.css";
 
 class SearchPokemon extends Component {
   constructor(props) {
