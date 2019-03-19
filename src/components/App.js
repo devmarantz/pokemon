@@ -54,6 +54,14 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p>Pokedex</p>
+          <span id="bigCircle">
+            <span id="bigInner"></span>
+            <span id="bigInner2"></span>
+          </span>
+          <span id="littleCircle1"></span>
+          <span id="littleCircle2"></span>
+          <span id="littleCircle3"></span>
+          <span id="headerCutout"></span>
         </header>
         <SearchPokemon pokemon={this.state.pokemon} onSearch={this.handleSearchFunction} />
         <PokemonInfo pokemon={this.state.pokemon} updateTeam={this.updateTeam}/>
