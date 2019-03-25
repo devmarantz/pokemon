@@ -1,5 +1,62 @@
 .pokemon-info {
   text-align: center;
+  background-color: #bbb;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin-top: 3rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.pokemon-info h1 {
+  background-color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.details-footer{
+  background-color: aquamarine;
+}
+
+.details-footer button{
+  margin: 10px;    
+  padding: 11px;
+  border-radius: 20px;
+}
+
+.pokemon-pic{
+  background-color: #fff;
+  background-image: url(https://cdn0.iconfinder.com/data/icons/pokemon-go-vol-2/135/_Open_Pokeball-512.png);
+  background-repeat: no-repeat;
+  background-size: 12rem;
+  margin-left: 4rem;
+  margin-top: 3rem;
+  height: 12rem;
+}
+
+.pokemon-pic img {
+  height: 10rem;
+  width: 10rem;
+  margin-left: -4.5rem;
+  margin-top: 0.7rem;
+}
+
+.pokemon-details{
+  background-color: #fff;
+
+}
+.container{
+  background-color: #fff;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
 }
 
 .stats, .type, .moves {

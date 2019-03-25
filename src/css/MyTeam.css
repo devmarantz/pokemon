@@ -24,3 +24,13 @@
 .x-pokemon:hover {
   background: red;
 }
+
+.edit-moves-button {
+  position: absolute;
+  bottom: -30px;
+  left: 30px;
+}
+
+.edit-team {
+  margin: 50px 30px;
+}
