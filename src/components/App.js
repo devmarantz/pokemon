@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       pokemon: {},
-      myTeam: []
+      myTeam: [],
+      move: {}
     }
   }
 
@@ -23,6 +24,9 @@ class App extends Component {
     })
   }
 
+  /** update team array if less than 6
+  * 
+  */
   updateTeam = () => {
     if (this.state.myTeam.length <= 6) {
       let flag = true;
@@ -53,6 +57,10 @@ class App extends Component {
     }
   }
 
+  /** Remove pokemon from team array
+  * @param {index} index of pokemon in array
+  * @return {Object} updated team array
+  */
   removePokemonFromTeam = idx => {
     this.setState(prevState => {
       prevState.myTeam.splice(idx, 1);
@@ -61,9 +69,20 @@ class App extends Component {
     })  
   }
 
-  // get pokemon information
+  /** API call to search for pokemon
+  * @param { string } pokemon name
+  * @return { Object } pokemon object
+  */
   handleSearchFunction = searchText => {
     API.findPokemon(searchText).then(res => this.setState({pokemon: res.data}))
+  }
+
+  /** update move detail
+   *  @param {string} url of move endpoint
+   * @return {Object} move object
+   */
+  updateMoveDetail = url => {
+    API.getMoveDetail(url).then(res => this.setState({move: res.data}))
   }
 
   render() {
@@ -71,7 +90,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <span id="bigCircle">
-            <span class="flashit" id="bigInner"></span>
+            <span className="flashit" id="bigInner"></span>
             <span id="bigInner2"></span>
           </span>
           <span id="littleCircle1"></span>
@@ -80,8 +99,8 @@ class App extends Component {
           <span id="headerCutout"></span>
         </header>
         <SearchPokemon pokemon={this.state.pokemon} onSearch={this.handleSearchFunction} />
-        <PokemonInfo pokemon={this.state.pokemon} updateTeam={this.updateTeam} />
-        <MyTeam myTeam={this.state.myTeam} removePokemonFromTeam={this.removePokemonFromTeam} teamMoves={this.state.teamMoves}/>
+        <PokemonInfo pokemon={this.state.pokemon} updateTeam={this.updateTeam} updateMoveDetail={this.updateMoveDetail} move={this.state.move} />
+        <MyTeam myTeam={this.state.myTeam} removePokemonFromTeam={this.removePokemonFromTeam} updateMoveDetail={this.updateMoveDetail} move={this.state.move} />
       </div>
     );
   }
