@@ -29,7 +29,7 @@
   z-index: 2;
 }
 
-.App-header #bigCircle {
+.App-header #bigCircle, .App-footer #bigCircle {
   margin-top: 1rem;
   height: 4rem;
   width: 4rem;
@@ -39,6 +39,12 @@
   display: inline-block;
   position: absolute;
   z-index: 1;
+}
+
+.App-footer #bigCircle {
+  height: 3rem;
+  width: 3rem;
+  background-color: #272727;
 }
 
 .App-header #bigInner {
@@ -109,11 +115,112 @@
 }
 @-webkit-keyframes flash {
 	0% { opacity: 1; } 
-	50% { opacity: .7; } 
+	50% { opacity: .6; } 
 	100% { opacity: 1; }
 }
 @keyframes flash {
 	0% { opacity: 1; } 
-	50% { opacity: .7; } 
+	50% { opacity: .6; } 
+	100% { opacity: 1; }
+}
+
+.App-footer {
+  background-color: #ef0000;
+  color: white;
+  text-align: left;
+  margin-top: 3rem;
+  height: 6.2rem;
+  overflow: hidden;
+}
+
+.App-footer #cross {
+  margin-top: 1rem;
+  margin-left: 79%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  z-index: 4;
+}
+
+.App-footer #cross:before, .App-footer #cross:after {
+ content: "";
+ position: absolute;
+ z-index: -1;
+ background: rgb(0, 0, 0);
+}
+
+.App-footer #cross:before {
+ left: 50%;
+ width: 30%;
+ margin-left: -15%;
+ height: 100%;
+}
+
+.App-footer #cross:after {
+ top: 50%;
+ height: 30%;
+ margin-top: -15%;
+ width: 100%;
+}
+
+.App-footer #line1, .App-footer #line2{
+  margin-top: 1rem;
+  height: 0.3rem;
+  width: 6rem;
+  border-radius: 15%;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.App-footer #line1{
+  background-color: rgb(46, 253, 5);
+  margin-left: 36%;
+}
+
+.App-footer #line2{
+  background-color: rgb(69, 132, 248);
+  margin-left: 50%;
+}
+
+.App-footer p{
+  background-color: rgb(165, 230, 128);
+  padding-top: 8px;
+  text-align: center;
+  margin-top: 2.5rem;
+  width: 24rem;
+  height: 2.5rem;
+  font-weight: 300;
+  color: #5a5858;
+  margin-left: 27%;
+  position: absolute;
+}
+
+.App-footer #textFlash{
+  padding-top: 6px;
+  text-align: center;
+  margin-top: 2.5rem;
+  width: 24rem;
+  height: 2.5rem;
+  font-weight: 500;
+  color: #5a5858;
+  margin-left: 37%;
+  position: absolute;
+}
+
+.flashText{
+  color:#f2f;
+	-webkit-animation: flashT linear 0.85s infinite;
+	animation: flashT linear 0.85s infinite;
+}
+
+@-webkit-keyframes flashT {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+@keyframes flashT {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
 	100% { opacity: 1; }
 }
