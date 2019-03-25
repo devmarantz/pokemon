@@ -101,6 +101,14 @@ class App extends Component {
         <SearchPokemon pokemon={this.state.pokemon} onSearch={this.handleSearchFunction} />
         <PokemonInfo pokemon={this.state.pokemon} updateTeam={this.updateTeam} updateMoveDetail={this.updateMoveDetail} move={this.state.move} />
         <MyTeam myTeam={this.state.myTeam} removePokemonFromTeam={this.removePokemonFromTeam} updateMoveDetail={this.updateMoveDetail} move={this.state.move} />
+        <footer className="App-footer">
+          <span id="bigCircle"></span>
+          <span id='line1'></span>
+          <span id='line2'></span>
+          <p>Ivy and Devon's Pokedex</p>
+          <span class="flashText" id="textFlash">|</span>
+          <span id="cross"></span>
+        </footer>
       </div>
     );
   }

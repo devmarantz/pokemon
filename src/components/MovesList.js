@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MoveDetail from './MoveDetail';
+import '../css/MovesList.css';
 
 class MovesList extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class MovesList extends Component {
     this.setState({ isHidden: true });
   }
 
+
   render() {
     const { pokemon, move } = this.props;
     const { isHidden } = this.state;
@@ -30,9 +32,9 @@ class MovesList extends Component {
       <div className='moves-list' >
         { !isHidden && <MoveDetail move={move} hideMoveDetail={this.hideMoveDetail} />}
         { pokemon.moves.map(move => (
-          <button type='button' value={move.move.url} key={move.move.name} onClick={this.getMoveDetail} className='move'> {move.move.name} </button>
-        )
-        )
+            <button type='button' value={move.move.url} key={move.move.name} onClick={this.getMoveDetail} className='move'> {move.move.name} </button>
+            )
+            )
         }
       </div>
     )

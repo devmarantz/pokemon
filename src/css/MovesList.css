@@ -1,0 +1,12 @@
+.moves-list {
+    background-color: rgb(165, 230, 128);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.moves-list button {
+    margin: 1px;
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 19px;
+}

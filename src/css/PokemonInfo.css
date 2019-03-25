@@ -7,7 +7,6 @@
   padding-left: 7rem;
   padding-right: 7rem;
   padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .pokemon-info h1 {
@@ -16,11 +15,12 @@
   padding-bottom: 4rem;
 }
 
-.details-footer{
-  background-color: aquamarine;
+
+.details-screen-footer{
+  background-color: #ef0000;
 }
 
-.details-footer button{
+.details-screen-footer button{
   margin: 10px;    
   padding: 11px;
   border-radius: 20px;
@@ -28,23 +28,29 @@
 
 .pokemon-pic{
   background-color: #fff;
-  background-image: url(https://cdn0.iconfinder.com/data/icons/pokemon-go-vol-2/135/_Open_Pokeball-512.png);
+  /* background-image: url(https://cdn0.iconfinder.com/data/icons/pokemon-go-vol-2/135/_Open_Pokeball-512.png); */
   background-repeat: no-repeat;
   background-size: 12rem;
-  margin-left: 4rem;
+  margin-left: -9rem;
   margin-top: 3rem;
-  height: 12rem;
 }
 
-.pokemon-pic img {
-  height: 10rem;
-  width: 10rem;
-  margin-left: -4.5rem;
-  margin-top: 0.7rem;
+.pokemon-pic #pokeball {
+  width: 9rem;
+  position: absolute;
+  margin-top: -1rem;
+  z-index: 0;
+}
+
+.pokemon-pic #pokemon {
+  position: absolute;
+  margin-left: 1.5rem;
+  z-index: 2;
 }
 
 .pokemon-details{
   background-color: #fff;
+  margin-top: 2.2rem;
 
 }
 .container{
@@ -76,5 +82,67 @@
   padding: 3px;
   width: 55px;
   margin: 0 10px;
+}
+
+.details-footer {
+  color: white;
+  text-align: left;
+  margin-bottom: 10px;
+  height: 6.2rem;
+  overflow: hidden;
+}
+
+.details-footer #footerCutout {    
+  background-color: white;
+  display: block;
+  margin-bottom: 10px;
+  margin-left: -21.5rem;
+  height: 7rem;
+  width: 20%;
+  transform: skew(45deg);
+  position: absolute;
+  z-index: 2;
+}
+
+@media (max-width: 1260px){
+  .details-footer #footerCutout {    
+    width: 23%;
+  }
+}
+
+@media (max-width: 1000px){
+  .details-footer #footerCutout {    
+    width: 29%;
+  }
+}
+
+.details-footer #littleCircle {
+  margin-top: 1rem;
+  height: 4rem;
+  width: 4rem;
+  margin-left: 2rem;
+  background-color: #ef0000;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+}
+
+.details-footer li {
+  margin-top: -1.5rem;
+  height: 4rem;
+  width: 4rem;
+  margin-left: 80%;
+  z-index: 1;
+}
+
+.details-footer li #line {
+  height: 0.3rem;
+  width: 6rem;
+  background-color: #27272A;
+  border-radius: 15%;
+  display: inline-block;
+  /* position: absolute; */
+  z-index: 1;
 }
 
