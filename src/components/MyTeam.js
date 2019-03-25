@@ -19,6 +19,18 @@ class MyTeam extends Component {
     this.props.removePokemonFromTeam(idx);
   }
 
+  selectPokemon = index => {
+    const selected = this.props.myTeam.filter((teamPokemon, idx) => {
+      return index === idx;
+    })
+    console.log(selected);
+    // this.setState({selected})
+  }
+
+  editMoves = pokemon => {
+
+  }
+
   render() {
     const { myTeam } = this.props;
     return(
@@ -26,14 +38,14 @@ class MyTeam extends Component {
         <h1>My Team</h1>
         <div className="team-pokemon-list">
         {(myTeam.length > 0) ? myTeam.map((pokemon, idx) => 
-          <div className="team-pokemon" key={pokemon.id}>
-            { this.state.isHidden && <div><button className="x-pokemon" onClick={() => this.removePokemon(idx)} >X</button> <button className="edit-moves-button" >Edit Moves</button></div> }
-            <img alt="pokemon" src={ pokemon.sprites.front_default } /><br />
+          <div className="team-pokemon" key={pokemon.id} onClick={() => this.selectPokemon(idx)} >
+            { this.state.isHidden && <div><button className="x-pokemon" onClick={() => this.removePokemon(idx)} >X</button> <button className="edit-moves-button" onClick={() => this.editMoves(pokemon)} >Edit Moves</button></div> }
+            <img alt="pokemon" src={ pokemon.sprites.front_default }  /><br />
             { pokemon.name } 
           </div>
         ) : <div> No Pokemon on your Team </div> }
         </div>
-          <button onClick={this.editTeam} >{ this.state.isHidden ? "Close" : "Edit Team" }</button>
+          <button className="edit-team" onClick={this.editTeam} >{ this.state.isHidden ? "Close" : "Edit Team" }</button>
       </div>
     ) 
   }
