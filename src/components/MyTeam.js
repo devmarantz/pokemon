@@ -24,7 +24,7 @@ class MyTeam extends Component {
       return index === idx;
     })
     console.log(selected);
-    // this.setState({})
+    // this.setState({selected})
   }
 
   editMoves = pokemon => {

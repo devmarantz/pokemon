@@ -14,6 +14,6 @@ export default {
   findPokemon: (text = '') => 
     axios.get(`${url}/${text}`),
 
-  getMoveDetail: (url = '') =>
-    axios.get(`${url}`)
+  getMoveDetail: (moveUrl = '') =>
+    axios.get(`${moveUrl}`)
 }
