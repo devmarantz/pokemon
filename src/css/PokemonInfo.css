@@ -30,13 +30,17 @@
   background-color: #fff;
   background-image: url(https://cdn0.iconfinder.com/data/icons/pokemon-go-vol-2/135/_Open_Pokeball-512.png);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 12rem;
+  margin-left: 4rem;
+  margin-top: 3rem;
+  height: 12rem;
 }
 
 .pokemon-pic img {
-
   height: 10rem;
   width: 10rem;
+  margin-left: -4.5rem;
+  margin-top: 0.7rem;
 }
 
 .pokemon-details{

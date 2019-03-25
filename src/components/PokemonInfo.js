@@ -15,13 +15,13 @@ class PokemonInfo extends Component {
         <div className="container">
           <div class="row">
             <div class="column">
+              <div className="pokemon-name"> {pokemon.name} </div>
               <div className="pokemon-pic">
                 <img alt="pokemon" src={pokemon.sprites.front_default} /> 
               </div>
             </div>
             <div class="column">
               <div className="pokemon-details">
-                <div className="pokemon-name"> {pokemon.name} </div>
                 <div className="pokemon-type">TYPE {pokemon.types.map(type => (
                   <div className="type" key={type.type.name}> {type.type.name} </div>
                 ))}
