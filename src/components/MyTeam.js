@@ -56,7 +56,7 @@ class MyTeam extends Component {
               {move.move.name}
             </div>))} */}
           </div>
-        ) : <div> No Pokemon on your Team </div> }
+        ) : <h1> No Pokemon on your Team </h1> }
         </div>
         <div className='team-details'>
           

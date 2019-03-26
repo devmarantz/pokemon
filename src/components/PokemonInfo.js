@@ -36,7 +36,7 @@ class PokemonInfo extends Component {
               <div className="column">
                 <div className="pokemon-details">
                   <div className="pokemon-type">TYPE {pokemon.types.map(type => (
-                    <div className="type" key={type.type.name}> {type.type.name} </div>
+                    <div className="type" key={type.type.name}> {type.type.name.toUpperCase()} </div>
                   ))}
                   </div>
                   <div className="pokemon-height">HEIGHT {pokemon.height}</div> 
