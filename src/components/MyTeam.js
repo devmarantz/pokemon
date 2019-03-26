@@ -36,7 +36,6 @@ class MyTeam extends Component {
     e.preventDefault();
     // find selected pokemon
     // edit remove move
-
   }
 
   render() {
@@ -47,7 +46,9 @@ class MyTeam extends Component {
         <div className="team-pokemon-list">
         {(myTeam.length > 0) ? myTeam.map((pokemon, idx) => 
           <div className="team-pokemon" key={pokemon.id} onClick={() => this.selectPokemon(idx)} >
-            { this.state.isHidden && <div><button className="x-pokemon" onClick={() => this.removePokemon(idx)} >X</button> <button className="edit-moves-button" onClick={() => this.editMoves(idx)} >Edit Moves</button></div> }
+            { this.state.isHidden && <div><button className="x-pokemon" onClick={() => this.removePokemon(idx)} >X</button> 
+            {/* <button className="edit-moves-button" onClick={() => this.editMoves(idx)} >Edit Moves</button> */}
+            </div> }
             <img alt="pokemon" src={ pokemon.sprites.front_default }  /><br />
             { pokemon.name } <br />
             {/* Moves: {pokemon.selectedMoves.map((move, idx) => (
