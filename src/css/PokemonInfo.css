@@ -10,7 +10,9 @@
 }
 
 .pokemon-info h1 {
-  background-color: #fff;
+  background-color: rgb(165, 230, 128);
+  font-weight: 300;
+  color: #5a5858;
   padding-top: 3rem;
   padding-bottom: 4rem;
 }
@@ -144,5 +146,31 @@
   display: inline-block;
   /* position: absolute; */
   z-index: 1;
+}
+
+.pokemon-info h1 #textFlash{
+  text-align: center;
+  margin-top: -2.5px;
+  margin-left: 5px;
+  font-weight: 500;
+  color: #5a5858;
+  position: absolute;
+}
+
+.flashText{
+  color:#f2f;
+	-webkit-animation: flashT linear 0.85s infinite;
+	animation: flashT linear 0.85s infinite;
+}
+
+@-webkit-keyframes flashT {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+@keyframes flashT {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
 }
 

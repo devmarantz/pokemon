@@ -56,7 +56,10 @@ class PokemonInfo extends Component {
             </div> 
           </div>
           : 
-          <h1>No Pokemon Selected</h1>
+          <h1>
+            No Pokemon Selected
+            <span class="flashText" id="textFlash">|</span>
+          </h1>
         }
         { !isHidden && <MovesList pokemon={pokemon} updateMoveDetail={updateMoveDetail} move={move} />}
         <footer className="details-footer">

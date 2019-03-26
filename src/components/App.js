@@ -105,8 +105,10 @@ class App extends Component {
           <span id="bigCircle"></span>
           <span id='line1'></span>
           <span id='line2'></span>
-          <p>Ivy and Devon's Pokedex</p>
-          <span class="flashText" id="textFlash">|</span>
+          <p>
+            Ivy and Devon's Pokedex
+            <span class="flashText" id="textFlash">|</span>
+          </p>
           <span id="cross"></span>
         </footer>
       </div>
