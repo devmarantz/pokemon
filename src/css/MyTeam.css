@@ -4,13 +4,6 @@
   margin-top: 1rem;
 }
 
-@font-face {
-  font-family: 'Pokemon GB';
-  src: url('./PokemonGB.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .my-team h1 {
   font-family: 'Pokemon GB';
 }
