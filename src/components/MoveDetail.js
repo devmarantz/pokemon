@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/MoveDetail.css';
 
 class MoveDetail extends React.Component {
   render() {

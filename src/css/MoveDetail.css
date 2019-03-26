@@ -1,0 +1,10 @@
+.move-detail {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.close-move-detail {
+    position: absolute;
+    top: -6px;
+    right: 14px;
+}
