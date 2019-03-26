@@ -189,23 +189,26 @@
   padding-top: 8px;
   text-align: center;
   margin-top: 2.5rem;
-  width: 24rem;
+  width: 30%;
   height: 2.5rem;
   font-weight: 300;
   color: #5a5858;
-  margin-left: 27%;
+  margin-left: 33%;
   position: absolute;
 }
 
+@media (max-width: 870px){
+  .App-footer p{
+    width: 16rem;
+  }
+}
+
 .App-footer #textFlash{
-  padding-top: 6px;
   text-align: center;
-  margin-top: 2.5rem;
-  width: 24rem;
-  height: 2.5rem;
+  margin-top: -2.5px;
+  margin-left: 5px;
   font-weight: 500;
   color: #5a5858;
-  margin-left: 37%;
   position: absolute;
 }
 

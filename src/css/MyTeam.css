@@ -1,3 +1,9 @@
+.edit-moves-button, .edit-team {
+  padding: 11px;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
 @font-face {
   font-family: 'Pokemon GB';
   src: url('./PokemonGB.woff') format('woff');
@@ -38,10 +44,10 @@
 
 .edit-moves-button {
   position: absolute;
-  bottom: -30px;
+  bottom: -48px;
   left: 30px;
 }
 
 .edit-team {
-  margin: 50px 30px;
+  margin: 40px;
 }
