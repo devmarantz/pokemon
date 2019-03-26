@@ -14,6 +14,11 @@ class MovesList extends Component {
     e.preventDefault();
     this.props.updateMoveDetail(e.target.value);
     this.showMoveDetail();
+    window.scroll({
+      top: 550, 
+      left: 0, 
+      behavior: 'smooth'
+    });
   }
 
   showMoveDetail = () => {
