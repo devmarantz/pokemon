@@ -16,6 +16,11 @@ class PokemonInfo extends Component {
 
   toggleMovesList = () => {
     this.setState({isHidden: !this.state.isHidden});
+    window.scroll({
+      top: 550, 
+      left: 0, 
+      behavior: 'smooth'
+    });
   }
 
   render() {
