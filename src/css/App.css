@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Pokemon GB';
+  src: url('./PokemonGB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
   font-family: sans-serif;
@@ -127,6 +134,7 @@
 
 .App-footer {
   background-color: #ef0000;
+  font-family: 'Pokemon GB';
   color: white;
   text-align: left;
   margin-top: 3rem;
