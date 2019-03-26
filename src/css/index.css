@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Pokemon GB';
+  src: url('./PokemonGB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
