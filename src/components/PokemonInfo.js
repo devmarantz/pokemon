@@ -12,6 +12,11 @@ class PokemonInfo extends Component {
 
   addToTeam = () => {
     this.props.updateTeam();
+    window.scroll({
+      top: 2500, 
+      left: 0, 
+      behavior: 'smooth'
+    });
   }
 
   toggleMovesList = () => {
