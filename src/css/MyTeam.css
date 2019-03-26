@@ -43,3 +43,11 @@
 .edit-team {
   margin: 40px;
 }
+
+.team-info {
+  font-family: "Pokemon GB";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

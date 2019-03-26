@@ -23,6 +23,8 @@ class MyTeam extends Component {
     //   return index === idx;
     // })
     this.setState({ selected: index });
+    // edit styles to highlight div
+    
   }
 
   editMoves = idx => {
@@ -40,12 +42,13 @@ class MyTeam extends Component {
 
   render() {
     const { myTeam } = this.props;
+    const selectedPokemon = myTeam[this.state.selected];
     return(
       <div className="my-team">
         <h1>My Team</h1>
         <div className="team-pokemon-list">
         {(myTeam.length > 0) ? myTeam.map((pokemon, idx) => 
-          <div className="team-pokemon" key={pokemon.id} onClick={() => this.selectPokemon(idx)} >
+          <div className="team-pokemon" key={pokemon.id} onClick={() => this.selectPokemon(idx)} style={(idx === this.state.selected) ? {backgroundColor: 'red' } :{backgroundColor: '' } } >
             { this.state.isHidden && <div><button className="x-pokemon" onClick={() => this.removePokemon(idx)} >X</button> 
             {/* <button className="edit-moves-button" onClick={() => this.editMoves(idx)} >Edit Moves</button> */}
             </div> }
@@ -58,14 +61,30 @@ class MyTeam extends Component {
           </div>
         ) : <h1> No Pokemon on your Team </h1> }
         </div>
-        <div className='team-details'>
-          
-        </div>
           <button className="edit-team" onClick={this.editTeam} >{ this.state.isHidden ? "Close" : "Edit Team" }</button>
+          { selectedPokemon ? 
+            <div className="team-info">
+              <div className="team-moves">
+                MOVES {selectedPokemon.selectedMoves.map(move => 
+                  <div key={move.move.name}> {move.move.name} </div> )}
+                  <br />
+                <button className="edit-team-moves">Edit Moves</button>
+              </div>
+              <div className="team-stats">
+                <ul className="stats"> 
+                  STATS {selectedPokemon.stats.map(stat => (
+                  <li key={stat.stat.name}> {stat.stat.name}: {stat.base_stat} </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          :
+          "" 
+          }
       </div>
     ) 
   }
 
 }
 
-export default MyTeam
+export default MyTeam;
