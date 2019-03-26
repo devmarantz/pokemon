@@ -7,7 +7,6 @@
 .my-team h1 {
   font-family: 'Pokemon GB';
 }
-
 .team-pokemon-list {
   display: flex;
   justify-content: center;
