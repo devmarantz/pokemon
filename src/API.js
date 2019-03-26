@@ -2,7 +2,6 @@ import axios from 'axios'
 
 const url = 'https://pokeapi.co/api/v2/pokemon'
 
-
 export default {
   getAllPokemon: (id = '') =>
     axios.get(`${url}/`, {
